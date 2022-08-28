@@ -1,6 +1,17 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for(i=0; i< array.length; i++){
+    let compliment = target - array[i];
+    for(let k = i+1; k<array.length; k++){
+      if(array[k] === compliment){
+        return true;
+      }
+    }
+  }
+  return false;
 }
+
+
 
 /* 
   Write the Big O time complexity of your function here
